@@ -1,0 +1,416 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-12-08T13:37:36.202Z",
+  "__export_source": "insomnia.desktop.app:v2021.5.3",
+  "resources": [
+    {
+      "_id": "req_0cf9856d4be14306aae59c60351a49a4",
+      "parentId": "fld_7808d8b557d74087918650c8e70676be",
+      "modified": 1606297643303,
+      "created": 1594688620436,
+      "url": "{{ base_uri }}/signup",
+      "name": "Create User",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"diego2\",\n\t\"password\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_db81dd9ef7fe49adbb105ef735594373",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594688620436,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_7808d8b557d74087918650c8e70676be",
+      "parentId": "wrk_a951d68d188d49579e453432cad892e8",
+      "modified": 1606286039028,
+      "created": 1594688604261,
+      "name": "User",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1594688604261,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_a951d68d188d49579e453432cad892e8",
+      "parentId": null,
+      "modified": 1606283843214,
+      "created": 1594153029597,
+      "name": "Keepable API",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_661b11b477cd45ee9f1299a7d6ac56eb",
+      "parentId": "fld_7808d8b557d74087918650c8e70676be",
+      "modified": 1606256933763,
+      "created": 1594690354175,
+      "url": "{{ base_uri }}/profile",
+      "name": "Delete user",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_40c333178d994dc3a25a4c6ce78290c8",
+          "name": "Authorization",
+          "value": "Token token={{ token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594688620386,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_86ee292c4be74d87af4050bd793602a8",
+      "parentId": "fld_f5969c3e00f34c96be63ae03dc7d82c5",
+      "modified": 1606294870261,
+      "created": 1594686343445,
+      "url": "{{ base_uri }}/login",
+      "name": "Login",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"username\": \"codeable\",\n\t\"password\": \"123456\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_5c7fde1aef874850bb3252c1cc3d37fc",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594686343445,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f5969c3e00f34c96be63ae03dc7d82c5",
+      "parentId": "wrk_a951d68d188d49579e453432cad892e8",
+      "modified": 1606286027087,
+      "created": 1594686300665,
+      "name": "Session",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1594686300665,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_310c64cd4abf42fa85327f415ad03949",
+      "parentId": "fld_f5969c3e00f34c96be63ae03dc7d82c5",
+      "modified": 1606254152807,
+      "created": 1594687121178,
+      "url": "{{ base_uri }}/logout",
+      "name": "Logout",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_80a5c947ed564f52aa24f24a3793a799",
+          "name": "Authorization",
+          "value": "Token token={{ token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594686343395,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_b47907a84f46420fb51db10248ea0205",
+      "parentId": "fld_67107ee60b1a4e48a4631373dd8b514c",
+      "modified": 1606254208665,
+      "created": 1594153038918,
+      "url": "{{ base_uri }}/notes",
+      "name": "List notes",
+      "description": "List all the notes by creation date and time using the `created_at` value.\n\nThis includes the notes that are \"soft\" deleted.",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_5349f3cbe5164e75926b7e7502bc5db2",
+          "name": "Authorization",
+          "value": "Token token={{ token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594153329040,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_67107ee60b1a4e48a4631373dd8b514c",
+      "parentId": "wrk_a951d68d188d49579e453432cad892e8",
+      "modified": 1594153033492,
+      "created": 1594153033492,
+      "name": "Notes",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1594153033492,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_bcef31c327544c39be64651c461456df",
+      "parentId": "fld_67107ee60b1a4e48a4631373dd8b514c",
+      "modified": 1606301826794,
+      "created": 1594153162677,
+      "url": "{{ base_uri }}/notes",
+      "name": "Create note",
+      "description": "Creates a new note.\n\n`title` is required.\n\nValid options for `color`: white, red, green, yellow, blue, magenta, cyan\n\n`color` defaults to \"white\" if not provided.\n`pinned` defaults to false if not provided.",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"New Note\",\n\t\"body\": \"Bonnie wrote this\",\n\t\"color\": \"cdcs\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_0ea1f22da07840179c85ab9e664efc7a",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_18bc472669484da4ab60917b6506f898",
+          "name": "Authorization",
+          "value": "Token token={{ token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594153329015,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": true,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_201e5e2239784fd0936aecc16222d27e",
+      "parentId": "fld_67107ee60b1a4e48a4631373dd8b514c",
+      "modified": 1606263319191,
+      "created": 1594153262208,
+      "url": "{{ base_uri }}/notes/11",
+      "name": "Update note",
+      "description": "Updates any value from a note.",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\": \"MMM\",\n\t\"color\": \"white\",\n\t\"pinned\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_64882385af5b4201957a7f34b9c91f3d",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_71f26aab98de498e84c8cd8685a581a0",
+          "name": "Authorization",
+          "value": "Token token={{ token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594153328990,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7fde4318b07d44b2a9869a2085d581e3",
+      "parentId": "fld_67107ee60b1a4e48a4631373dd8b514c",
+      "modified": 1632235242383,
+      "created": 1594153067491,
+      "url": "{{ base_uri }}/notes/116",
+      "name": "Delete note",
+      "description": "Deletes a note.\nThe first time this is called on a note, it \"soft\" deletes it by setting the `deleted_at` value.\nThe second time this is called on a note, it is deleted permanently.",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "description": "",
+          "id": "pair_103e98549f124dfd984d7c10701457da",
+          "name": "Authorization",
+          "value": "Token token={{ token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594153328965,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6756a754a56241f891ba33edc28dcdce",
+      "parentId": "fld_67107ee60b1a4e48a4631373dd8b514c",
+      "modified": 1606306584615,
+      "created": 1594153328940,
+      "url": "{{ base_uri }}/notes/28",
+      "name": "Recover note",
+      "description": "The soft deletion of a note is done by setting the `deleted_at` value. To undelete it, set that `deleted_at` value to `null`.",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"deleted_at\": null\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "id": "pair_089fef348b654a23b8abcfd3114a6c15",
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "description": "",
+          "id": "pair_591e87cf52254c8a98e290eff50d3e6f",
+          "name": "Authorization",
+          "value": "Token token={{ token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1594153328940,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_7c676e5fc8bee9c4230caa705619d1697fde250a",
+      "parentId": "wrk_a951d68d188d49579e453432cad892e8",
+      "modified": 1594153029663,
+      "created": 1594153029663,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": null,
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1594153029663,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_7c676e5fc8bee9c4230caa705619d1697fde250a",
+      "parentId": "wrk_a951d68d188d49579e453432cad892e8",
+      "modified": 1594153029664,
+      "created": 1594153029664,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_56d431fa816e450184e25a10e49c144b",
+      "parentId": "wrk_a951d68d188d49579e453432cad892e8",
+      "modified": 1594153029603,
+      "created": 1594153029603,
+      "fileName": "Keepable API",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_66128c5a6da348d3875f20c5bf103b69",
+      "parentId": "env_7c676e5fc8bee9c4230caa705619d1697fde250a",
+      "modified": 1606308683571,
+      "created": 1606254015052,
+      "name": "localhost",
+      "data": {
+        "base_uri": "http://localhost:3000",
+        "token": "8Uh4zmGa66q9AmurcR4UHwE1"
+      },
+      "dataPropertyOrder": { "&": ["base_uri", "token"] },
+      "color": "#7d69cb",
+      "isPrivate": false,
+      "metaSortKey": 1606254015052,
+      "_type": "environment"
+    },
+    {
+      "_id": "env_37616f99a46d4d35bf292c20af48d711",
+      "parentId": "env_7c676e5fc8bee9c4230caa705619d1697fde250a",
+      "modified": 1638947808722,
+      "created": 1606265039956,
+      "name": "heroku",
+      "data": {
+        "base_uri": "https://keepable-api.herokuapp.com",
+        "token": "diLcqV2nxKhniRmmezdsP1u9"
+      },
+      "dataPropertyOrder": { "&": ["base_uri", "token"] },
+      "color": "#67cb80",
+      "isPrivate": false,
+      "metaSortKey": 1606265039956,
+      "_type": "environment"
+    }
+  ]
+}
